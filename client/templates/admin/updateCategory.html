@@ -1,0 +1,13 @@
+<template name="updateCategory">
+    <div id="updateCategory" class="container">
+        <h2>Update Race Category</h2>
+        {{#autoForm collection="Category" doc=this id="updateCategoryForm" type="update" omitFields="created"}}
+            <fieldset>
+                {{> afQuickField name='name'}}
+                <label class="control-label" for="parent">Parent Category</label>{{> afFieldInput name='parent' options=categoryOptions firstOption='None'}}
+                {{> afQuickField name='description'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Update</button>
+        {{/autoForm}}
+    </div>
+</template>

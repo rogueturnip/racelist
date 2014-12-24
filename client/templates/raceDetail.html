@@ -1,0 +1,40 @@
+<template name="raceDetail">
+    <div id="raceDetail" class="container">
+       <h2>{{name}} {{> favoriteButton _id=_id}} {{favoriteCount _id}}</h2> 
+       <div class="row show-grid">
+			<div class="col-md-4">
+				<!-- Thumbnails -->
+				<div class="thumbnail">
+					<img alt="" src="./images/pic.jpg">
+					<ul class="list-group">
+						<li class="list-group-item"><span class="glyphicon glyphicon-calendar"></span><span class="badge">{{formatDate raceDate}}</span>Date</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-envelope"></span><span class="badge">{{contactEmail}}</span>Email</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-globe"></span><span class="badge"><a href="{{website}}" style="color:#fff;">Click Here</a></span>Website</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-certificate"></span><span class="badge">{{category}}</span>Category</li>
+					</ul>
+				</div><!-- /Thumbnails -->		
+			</div>
+			<div class="col-md-8 left-block">
+				<div class="info-block">
+					<div class="info-text">
+						<h3>Description</h3>
+						<p>{{description}}</p>
+					</div>
+					<ul class="social-icon">
+						<li><a href="" class="social twitter">@RyanGosling</a></li>
+						<li><a href="" class="social google_plus">@RyanGosling</a></li>
+						<li><a href="" class="social facebook">@RyanGosling</a></li>
+					</ul>
+					<div class="list">
+						<ul class="list-group inverse-theme">
+							<li class="list-group-item"><h4>Race Location</h4></li>
+							<li class="list-group-item"><span class="badge">19</span>City</li>
+							<li class="list-group-item"><span class="badge">35</span>Province</li>
+							<li class="list-group-item"><span class="badge">1989</span>Country</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</template>

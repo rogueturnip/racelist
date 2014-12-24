@@ -1,0 +1,10 @@
+<template name="showCategory">
+    <div id="showCategory" class="container">
+        <h2>Race Categories</h2>
+        <ul id="categories" class="list-group">
+            {{#each categories}}
+            <li class="list-group-item"><a href="{{pathFor 'updateCategory' _id=this._id }}">{{name}}</a> <br />{{description}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

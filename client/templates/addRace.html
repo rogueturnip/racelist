@@ -1,0 +1,16 @@
+<template name="addRace">
+    <div id="addRace" class="container">
+        <h2>Add New Race</h2>
+        {{#autoForm collection="Race" id="addRaceForm" type="insert" omitFields="created,modified"}}
+            <fieldset>
+                {{> afQuickField name='name'}}
+                <label class="control-label" for="category">Category</label>{{> afFieldInput name='category' options=categoryOptions}}
+                {{> afQuickField name='contactEmail'}}
+                {{> afQuickField name='website'}}
+                {{> afQuickField name='raceDate'}}
+                {{> afQuickField name='description'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Insert</button>
+        {{/autoForm}}
+    </div>
+</template>
