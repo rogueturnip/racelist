@@ -1,0 +1,119 @@
+#showRace {
+	padding: 15px 0px 15px 0px;
+}
+
+.race_cblock {
+	display: block;
+	color: #ababab;
+	font-size: 30px;
+	padding: 0px 8px 2px 13px;
+	font-weight: bold;
+	position: relative;
+	top: 0;
+	left: 0;
+	line-height: 110%;
+	min-height: 30px;
+	margin: 0 6px 0 0;
+	font-family: oswald, 'arial narrow';
+	float: left;
+}
+
+.race_cblock em {
+	font-style: normal;
+	text-transform: uppercase;
+	line-height: 110%;
+}
+
+.race_cblock .race_day, .race_cblock .race_month, .race_cblock .race_day {
+	font-size: 12px;
+	font-weight: normal;
+	display: block;
+	float: left;
+	padding-right: 6px;
+}
+
+.race_cblock .race_date {
+	display: block;
+	text-align: left;
+	font-size: 40px;
+}
+
+.race_cblock .race_day {
+	font-size: 12px;
+	font-weight: normal;
+	display: block;
+	float: left;
+	padding-right: 6px;
+}
+
+.race_cblock .race_month {
+}
+
+.race_event {
+	margin-left: 0;
+	margin-bottom: 0;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+	list-style-type: none;
+}
+
+#race_list {
+	font-family: 'open sans',arial;
+	border-right: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 20px;
+}
+
+.race_event_a {	
+	background-color: #f9f9f9;
+	display: block;
+	width: 100%;
+	position: relative;
+	padding: 10px 0px 20px 0px;
+	min-height: 54px;
+	overflow: hidden;
+	border-left-width: 3px;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-bottom-color: #ffa800;
+}
+
+.race_event_a:hover {
+	background-color: #f4f4f4;
+	border-left-width: 6px;
+}
+
+.race_title {
+	display: block;
+	font-family: oswald, 'arial narrow';
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 0px 0px 5px 0px;
+}
+
+.race_desc {
+	display: block;
+	font-family: 'open sans',arial;
+	line-height: 120%;
+	padding-bottom: 3px;
+	margin-left: 5px;
+	padding: 5px 15px 0 80px;
+	margin-bottom: 0px;
+}
+
+.race_info {
+	font-size: 10px;
+	line-height: 120%;
+	padding-bottom: 2px;
+	opacity: 0.7;
+}
+
+.race_info {
+	display: block;
+}
+
+.race_info2 {
+	display: block;
+}

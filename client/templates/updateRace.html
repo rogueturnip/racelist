@@ -1,0 +1,9 @@
+<template name="updateRace">
+    <div id="updateRace" class="container">
+        <h2>Update Race</h2>
+        {{#autoForm collection="Race" doc=this id="updateRaceForm" type="update" omitFields="created,modified"}}
+            {{>raceForm}}
+            <button type="submit" class="btn btn-primary">Update Race</button>
+        {{/autoForm}}
+    </div>
+</template>

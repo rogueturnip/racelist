@@ -1,0 +1,14 @@
+<template name="raceForm">
+            <fieldset>
+                {{> afQuickField name='name'}}
+                <label class="control-label" for="category">Category</label>{{> afFieldInput name='category' options=categoryOptions}}
+                {{> afQuickField name='contactEmail'}}
+                {{> afQuickField name='country'}}
+                {{> afQuickField name='province'}}
+                {{> afQuickField name='city'}}
+                {{> afQuickField name="startLocation"}}
+                {{> afQuickField name='website'}}
+                {{> afQuickField name='raceDate'}}
+                {{> afQuickField name='description'}}
+            </fieldset>
+</template>

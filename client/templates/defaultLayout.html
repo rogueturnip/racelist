@@ -1,12 +1,13 @@
 <template name="defaultLayout">
+  <div id="wrapper">
 	<header id="header" role="banner">
 		{{> yield region="menu"}}
 	</header>
 	<section id="main">
 		{{> yield}}
-	<div class="push"></div>
 	</section>
 	<footer id="footer">
 		{{> yield region="footer"}}
 	</footer>
+  </div>
 </template>

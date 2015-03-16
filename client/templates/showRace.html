@@ -1,54 +1,37 @@
 <template name="showRace">
     <div id="showRace" class="container">
         <h2>Races</h2>
-        <ul id="races" class="list-group">
+
+        <div id="race_list" class="race_list col-md-6">
             {{#each races}}
-            <li class="list-group-item"><a href="{{pathFor 'raceDetail' _id=this._id }}">{{name}}</a>  {{> favoriteButton _id=this._id}}<br />{{formatDate raceDate}} - {{favoriteCount this._id}}</li>
-            {{/each}}
-        </ul>       <div class="table-responsive">
-
-                
-              <table id="mytable" class="table table-bordred table-striped">
-                   
-                   <thead>
-                   
-                   <th><input type="checkbox" id="checkall" /></th>
-                   <th>Race Name</th>
-                    <th>Race Date</th>
-                     <th>Popularity</th>
-                     <th>Favorite</th>
-                      <th>Edit</th>
-                       <th>Delete</th>
-                   </thead>
-    <tbody>
-    {{#each races}} 
-    <tr>
-    <td><input type="checkbox" class="checkthis" /></td>
-    <td><a href="{{pathFor 'raceDetail' _id=this._id }}">{{name}}</td>
-    <td>{{raceDate}}</td>
-    <td>{{favoriteCount this._id}}</td>
-    <td>{{> favoriteButton _id=this._id}}</td>
-    <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-    <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-    {{/each}}
-    </tbody>
-        
-</table>
-
-<div class="clearfix"></div>
-<ul class="pagination pull-right">
-  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-</ul>
-                
+            <div class="race_event">
+                <a class="race_event_a" style="border-color: #ffa800" href="{{pathFor 'raceDetail' _id=this._id }}">
+                    <p class="race_cblock" style="bgcolor:#ffa800">
+                        <em class="race_date">{{getDay raceDate}}</em><em class="race_month">{{getMonth raceDate}}</em>
+                        <em class="race_day">{{getDayofWeek raceDate}}</em><em class="clear"></em>
+                    </p>
+                    <p class="race_desc">
+                        <span class="race_title">{{name}}</span>
+                        <span class="race_info">
+		<em class="race_time">8:00 am</em> <em class="race_location">Anaeho'omalu Bay at Waikoloa Beach</em>
+		</span>
+		<span class="race_description race_info"><em class="race_description">{{description}}</em></span>
+                        <span class="race_info">
+		<em class="race_oganizer"><i>Event Organized By:</i> </em> 
+		<span class="race_types">
+		<em><i>Event Type :</i></em><em>Free Event</em><em>Olympic Distance Triathlon</em>
+		<em>Triathlon</em><i class="clear"></i>
+		</span>
+                        <span class="race_Favorite">
+		    <em>Interested People: {{favoriteCount this._id}}</em>
+		</span>
+                        </span>
+                    </p>
+                </a>
+                <div class="clear"></div>
             </div>
-            
+            {{/each}}
         </div>
-        
+    </div>
+
 </template>
